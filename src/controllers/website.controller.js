@@ -77,7 +77,7 @@ const deleteWebsite = async (req, res) => {
 		res.json({ success: true, message: "Deleted" });
 	} catch (err) {
 		console.error(err);
-		res.status(500).json({ error: { message: "Failed to delete" } });
+		res.status(500).json({ error: { message: err?.meta?.cause || "Failed to delete" } });
 	}
 };
 
