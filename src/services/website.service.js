@@ -90,10 +90,11 @@ async function analyzeAndStoreWebsite(rawUrl, options = { enhance: false }) {
 
 // Function to get a list of websites with optional search
 async function getWebsites({ q, limit = 50, offset = 0 } = {}) {
+    const search = q ? q.trim() : "";
 	// basic search on url or brandName
-	const where = q
+	const where = search
 		? {
-				OR: [{ url: { contains: q, mode: "insensitive" } }, { brandName: { contains: q, mode: "insensitive" } }],
+				OR: [{ url: { contains: search, mode: "insensitive" } }, { brandName: { contains: search, mode: "insensitive" } }],
 		}
 		: {};
         

@@ -1,3 +1,4 @@
+import { it } from "zod/locales";
 import { analyzeAndStoreWebsite, getWebsites, getWebsiteById, updateWebsiteById, deleteWebsiteById } from "../services/website.service.js";
 import { z } from "zod";
 
@@ -40,7 +41,7 @@ const getAllWebsites = async (req, res) => {
 	try {
 		const { q, limit, offset } = req.query;
 		const items = await getWebsites({ q, limit: limit ?? 50, offset: offset ?? 0 });
-		res.json({ success: true, data: items });
+		res.json({ success: true, data: items, query: { q, limit, offset }, itemsCount: items.length });
 	} catch (err) {
 		console.error(err);
 		res.status(500).json({ error: { message: err?.meta?.cause || "Failed to fetch websites" } });
