@@ -9,7 +9,7 @@ The service is secured with **Arcjet middleware** for **rate limiting and bot pr
 
 ## 📑 Full API Documentation
 Explore complete API usage, parameters, and responses here:  
-👉 [View Postman Documentation](https://documenter.getpostman.com/view/32382436/2sB34ikes3)
+👉 [View Postman Documentation](https://documenter.getpostman.com/view/32382436/2sB3BHm8xY)
 
 ## 🚀 Features
 
