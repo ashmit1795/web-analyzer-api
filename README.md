@@ -5,7 +5,7 @@ The **Web Analyzer API** is a backend service that analyzes a given website URL,
 The service is secured with **Arcjet middleware** for **rate limiting and bot protection**.
 
 ## 🔗 Live API
-**Base URL:** [https://subscription-tracker-sgrx.onrender.com/](https://subscription-tracker-sgrx.onrender.com/)
+**Base URL:** [https://web-analyzer-api.vercel.app/](https://web-analyzer-api.vercel.app/)
 
 ## 📑 Full API Documentation
 Explore complete API usage, parameters, and responses here:  
