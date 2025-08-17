@@ -31,7 +31,7 @@ const analyzeWebsite = async (req, res) => {
         if (err.code === "ERR_NON_2XX_3XX_RESPONSE") {
             return res.status(502).json({ error: { type: "bad_response", message: err.message } });
         }
-		return res.status(500).json({ error: { type: "internal", message: "Internal server error" } });
+		return res.status(500).json({ error: { type: "internal", message: err.message } });
 	}
 };
 
